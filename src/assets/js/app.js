@@ -16,6 +16,10 @@ $(document).ready(function () {
             break;
         case "viewclient":
         //startViewClient();
+        break;
+        case "referrals":
+            referrals.startReferrals();
+            break;
         default:
             break;
     }

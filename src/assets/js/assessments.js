@@ -18,7 +18,7 @@ assessments.administerBdi = function (url, id) {
     if ( Foundation.MediaQuery.current === 'small') {
         var holder =  $('#bdi2Holder');
             hackUtils.getCurrentSelectedClient(function (client) {
-                var url = hackUtils.getBdi2Url();// + "&patient_id=" + client.id;
+                var url = hackUtils.getBdi2Url() + "&patientID=" + client.id;
                 
                 holder.html(''.concat(
                     '<iframe width="420" height="auto" src="' ,
@@ -26,7 +26,10 @@ assessments.administerBdi = function (url, id) {
                        '" frameborder="0" allowfullscreen></iframe>'   
                 )  
                 );
+
+                products.listenForBdi(client);
             });
+
         $('#bd2Modal').foundation('open')
     } else {
         self.location = url;

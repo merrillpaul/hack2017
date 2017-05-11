@@ -8,6 +8,8 @@ AssessmentResult - score calculated in Qualtrics.
 
 (function () {
 window.clients = {};
+
+
 clients.startClients = function () {        
 
 

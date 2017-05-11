@@ -22,5 +22,10 @@ assessments.administerBdi = function (url, id) {
     }
 };
 
+hackUtils.getCurrentSelectedClient(function (client) {
+    $('#asmt-patient-name').html(client.PatientName);
+});
+
 window.assessments = assessments;
+
 })();    

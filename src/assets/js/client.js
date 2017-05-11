@@ -10,6 +10,37 @@ AssessmentResult - score calculated in Qualtrics.
 window.clients = {};
 
 
+clients.savePatient = function () {
+    var 
+    patientName = $('#newPatientForm input[name="patientName"]').val(),
+    htmlAlert = ''.concat(
+            '<div id="patientSuccess" data-closable="hinge-out-from-top" data-closable class="callout alert-callout-border success">',
+                '<span class="fa fa-check-circle"></span>     ',
+                    '<span class="content">',
+                        '<strong>',
+                        ' Patient ', patientName , ' saved to system',
+                   ' </span>',
+                    '<button class="close-button" aria-label="Dismiss alert" type="button" data-close>',
+                '<span aria-hidden="true">&times;</span>',
+                '</button>',
+            '</div>'
+            )
+    dpd.patients.post({"PatientName":patientName}, function(result, err) {
+            if(err) {
+                return console.log(err);
+            }
+            addNotification(htmlAlert);
+            setTimeout(function () {
+                Foundation.Motion.animateOut($('#patientSuccess'), 'hinge-out-from-top');
+                $('#patientSuccess').remove();
+            }, 1500);
+            setTimeout(function () {
+                self.location = 'patients.html';
+            }, 2000);
+    });
+    
+};
+
 clients.startClients = function () {        
 
 

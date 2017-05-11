@@ -14,6 +14,9 @@ $(document).ready(function () {
         case "bdi2":
             products.startBdi2();
             break;
+        case "bai":
+        products.startBai();
+        break;
         case "viewclient":
         //startViewClient();
         break;

@@ -89,6 +89,21 @@ html.theme1 {
 @import 'hackathon/assessments';
 
 
+.help {
+    position: fixed;
+    cursor: pointer;
+    bottom: 0%;
+    right: 0%;
+    i {
+        height: 100px;
+        width: 100px;
+        font-size: 2.5rem;
+        color: #EA7600;
+        text-shadow: 6px 1px 8px rgba(150, 150, 150, 1);
+    }
+}
+
+
 
 
 

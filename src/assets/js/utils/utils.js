@@ -14,5 +14,9 @@
         return 'https://pearsonclinical.eu.qualtrics.com/jfe/form/SV_1IikSYAFbJJX7Vj';
     };
 
+     utils.getBaiUrl = function () {
+        return 'https://pearsonclinical.eu.qualtrics.com/jfe/form/SV_etlcN7yN4rxZvwh';
+    };
+
     window.hackUtils = utils;
 })();

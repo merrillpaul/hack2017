@@ -26,12 +26,41 @@
                     score = data.score,
                     quickResult = data.clazz;
                     socketTopic.off('bdi'); 
-                    $('#bdi2Holder').html('');
-                    products.showNotification(client, score, quickResult)
+                      $('#bdi2Holder').html('');
+                    products.showNotification(client, score, quickResult, 'BDI - II')
             })
         };
 
-        products.showNotification = function (client, score, quickResult) {
+    products.startBai = function () {
+        var holder =  $('#bdi2Holder');
+        hackUtils.getCurrentSelectedClient(function (client) {
+            var url = hackUtils.getBaiUrl() + "?patientID=" + client.id;
+            
+            holder.html(''.concat(
+                '<iframe width="420" height="auto" src="' ,
+                    url,
+                    '" frameborder="0" allowfullscreen></iframe>'   
+            )  
+            );
+            products.listenForBai(client);
+        });
+
+        
+
+    };
+
+    products.listenForBai = function (client) {
+        socketTopic.on('bdi', function (data) {
+            var patientID = data.patientID,
+                score = data.score,
+                quickResult = data.clazz;
+                socketTopic.off('bdi'); 
+                    $('#bdi2Holder').html('');
+                products.showNotification(client, score, quickResult, 'BAI')
+        })
+    };
+
+     products.showNotification = function (client, score, quickResult, product) {
             var 
             clazz,
             yayHtml ;
@@ -69,10 +98,10 @@
             '</div>'
             );
             addNotification(yayHtml);
-            products.saveClientScore(client, score, quickResult);
+            products.saveClientScore(client, score, quickResult, product);
         };
 
-        products.saveClientScore =  function (client, score, quickresult) {
+        products.saveClientScore =  function (client, score, quickresult, product) {
             var updateObject = {},
             quickResult = client.QuickResult || [],
             assessmentStatus = client.AssessmentStatus || [],
@@ -81,7 +110,7 @@
 
             quickResult.unshift(quickresult.toLowerCase());
             assessmentStatus.unshift('completed');
-            assessmentAdministered.unshift('BDI-II');
+            assessmentAdministered.unshift(product);
             assessmentResult.unshift(score);
             updateObject = {
 
@@ -94,13 +123,15 @@
             dpd.patients.put(client.id, updateObject, function (result, err) {
                 if (err) { return console.log(err); }
                 console.log(result, result.id);
+               
                 setTimeout(function () {
+                   
                     Foundation.Motion.animateOut($('#bdiResultNotification'), 'hinge-out-from-top');
                     $('#bdiResultNotification').remove();
-                }, 1500);
+                }, 2000);
                 setTimeout(function () {
                     self.location = 'patients.html';
-                }, 2000);
+                }, 3000);
             });
         };
 

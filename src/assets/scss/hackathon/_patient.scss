@@ -33,7 +33,7 @@ table tfoot tr td {
 }
 }
 
-.clients, .assessments {
+.clients, .assessments, .clients-ctr {
   .card {
     border-radius: 10px;
     &:hover {
@@ -91,7 +91,7 @@ table tfoot tr td {
         background-color: scale-color(map-get($foundation-palette, warning), $lightness: 80%);
       }
       &.severe {
-        background-color: scale-color(map-get($foundation-palette, alert), $lightness: 80%);
+        background-color: scale-color(map-get($foundation-palette, alert), $lightness: 40%);
       }
     }
 }

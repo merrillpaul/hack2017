@@ -13,6 +13,7 @@ window.clients = {};
 clients.savePatient = function () {
     var 
     patientName = $('#newPatientForm input[name="patientName"]').val(),
+    gender = $('#newPatientForm').serializeArray().find(function (it) { return it.name === 'gender';}).value,
     htmlAlert = ''.concat(
             '<div id="patientSuccess" data-closable="hinge-out-from-top" data-closable class="callout alert-callout-border success">',
                 '<span class="fa fa-check-circle"></span>     ',
@@ -24,8 +25,9 @@ clients.savePatient = function () {
                 '<span aria-hidden="true">&times;</span>',
                 '</button>',
             '</div>'
-            )
-    dpd.patients.post({"PatientName":patientName}, function(result, err) {
+            );
+            
+    dpd.patients.post({"PatientName":patientName, "Gender": gender}, function(result, err) {
             if(err) {
                 return console.log(err);
             }
@@ -39,6 +41,39 @@ clients.savePatient = function () {
             }, 2000);
     });
     
+};
+
+clients.savePatientAndCreateAssessment = function () {
+    var 
+    patientName = $('#newPatientForm input[name="patientName"]').val(),
+    gender = $('#newPatientForm').serializeArray().find(function (it) { return it.name === 'gender';}).value,
+    htmlAlert = ''.concat(
+            '<div id="patientSuccess" data-closable="hinge-out-from-top" data-closable class="callout alert-callout-border success">',
+                '<span class="fa fa-check-circle"></span>     ',
+                    '<span class="content">',
+                        '<strong>',
+                        ' Patient ', patientName , ' saved to system',
+                   ' </span>',
+                    '<button class="close-button" aria-label="Dismiss alert" type="button" data-close>',
+                '<span aria-hidden="true">&times;</span>',
+                '</button>',
+            '</div>'
+            );
+    dpd.patients.post({"PatientName":patientName, "Gender": gender}, function(result, err) {
+            if(err) {
+                return console.log(err);
+            }
+            addNotification(htmlAlert);
+            setTimeout(function () {
+                Foundation.Motion.animateOut($('#patientSuccess'), 'hinge-out-from-top');
+                $('#patientSuccess').remove();
+            }, 1500);
+            setTimeout(function () {
+                localStorage.setItem('selClient',  result.id );
+                self.location='assessments.html';
+               
+            }, 2500);
+    });
 };
 
 clients.startClients = function () {        
@@ -91,7 +126,7 @@ clients.startClients = function () {
                     for (i = 0; i < _clients.length; i++) {
                         client = _clients[i];
                         
-                        client.gender = i%2 === 0 ? 'male': 'female';
+                       // client.gender = i%2 === 0 ? 'male': 'female';
                         latestQuickResult = (client.QuickResult || [''])[0];
 
                         html += ''.concat(
@@ -106,10 +141,13 @@ clients.startClients = function () {
                             '    <div class="card-section emotion ' + latestQuickResult + '">',
                             '      <h6>Client Id: XXXX' + client.id + '</h6>',
                             '      <h5>DOB: ' + (client.DOB || '') + '</h5>',
-                            '      <h5>Gender : <i class="fa fa-' + (client.gender) + '" aria-hidden="true"></i></h5>',
+                            '      <h5>Gender : <i class="fa fa-' + (client.Gender.toLowerCase()) + '" aria-hidden="true"></i></h5>',
 
                             '              <a onClick="localStorage.setItem(\'selClient\', \'' + client.id + '\');self.location=\'assessments.html\'"  class="button primary expanded">',
                             '                <i class="fa fa-plus-circle" aria-hidden="true"></i> Assessment',
+                            '      </a>',
+                              '              <a href=""  class="button element expanded">',
+                            '                <i class="fa" aria-hidden="true"></i> Generate Report',
                             '      </a>',
 
                             '    </div>',

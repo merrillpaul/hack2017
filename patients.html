@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heads App</title>
-    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href=/hack2017/assets/css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -21,7 +21,7 @@
             <div class="row expanded app-dashboard-top-nav-bar">
                 <div class="columns medium-3">
                     <button data-toggle="app-dashboard-sidebar" class="menu-icon hide-for-medium"></button>
-                    <a href="hackathon/dashboard.html" class="app-dashboard-logo">Heads App</a>
+                    <a href="dashboard.html" class="app-dashboard-logo">Heads App</a>
                 </div>
                 <div class="columns show-for-medium">
                     <div class="app-dashboard-search-bar-container">
@@ -60,13 +60,13 @@
                         <div class="app-dashboard-sidebar-inner">
                             <ul class="menu vertical">
                                 <li>
-                                    <a href="hackathon/assessments.html" class="is-active">
+                                    <a href="javascript:localStorage.removeItem('selClient'); self.location = 'select_patients.html'" class="is-active">
                                         <i class="primary large material-icons">assessment</i>
                                         <span class="app-dashboard-sidebar-text">Assessments</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="hackathon/patients.html">
+                                    <a href="patients.html">
                                         <i class="primary material-icons">person</i><span class="app-dashboard-sidebar-text">Patients</span>
                                     </a>
                                 </li>
@@ -87,52 +87,36 @@
     
             <!-- content -->
             <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
-                <h4>Select Assessment for <span id="asmt-patient-name"></span></h4>
+                <h4>Patients <Portal></Portal></h4>
                 <div class="row">
                     <div class="columns large-12">
-                        <div class="row assessments">
-                
-                            <div id="bd2Ctr"  class="columns large-4 medium-6 small-12">
-                                <a href="javascript: assessments.administerBdi('/hackathon/bdi-2.html', 'bd2Modal')">
-                                <div class="card">
-                                    <div class="card-divider" style="background-image: url('../assets/img/hack/logos/beck_bdi_ii_logo.png')">
-                                        BDI - II
-                                    </div>                    
-                                    <div class="card-section">
-                                        Start Assessment
-                                    </div>
+                        <div class="row">
+                            <div class="small-10 medium-6 large-6 columns">
+                               <div class="input-group has-icon">
+                                    <input id="search-client" class="input-group-field" type="text" placeholder="Search Patients" />
+                                    <span class="input-group-label icon"><li class="fa fa-search"></li></span>
                                 </div>
-                                </a> 
                             </div>
-                
                         </div>
                 
-                        <!-- div id="externalAssessment" class="row external-assessment hide">
-                            <div class="columns large-12">
-                                <div class="responsive-embed widescreen">
-                                    <iframe width="420"  src="https://pearsonclinical.eu.qualtrics.com/jfe/form/SV_1IikSYAFbJJX7Vj" frameborder="0" allowfullscreen></iframe>
+                        <div class="clients">
+                            <div class="row">
+                                <div class="medium-6 small-12 large-4 columns">
+                                    <a href="#" class="primary expanded button"><i class="fa fa-plus"></i> Add New Patient</a><br/>  
                                 </div>
                             </div>
-                        </div -->
+                        </div>
                 
                 
+                        <div id='client-ctr' class="clients-ctr">
+                            Loading ...
+                        </div>
+                
+                        <script>
+                            window.PAGE_NAME = 'clients';
+                        </script>
                     </div>
                 </div>
-                
-                
-                <div class="fullscreen reveal" id="bd2Modal" data-reveal data-close-on-click="true" data-animation-in="spin-in" data-animation-out="spin-out">
-                 <div id="bdi2Holder" class="responsive-embed" style="height: 100%">
-                    <!-- iframe width="420"  src="https://pearsonclinical.eu.qualtrics.com/jfe/form/SV_1IikSYAFbJJX7Vj" frameborder="0" allowfullscreen></iframe -->
-                  </div>
-                  <button class="close-button" data-close aria-label="Close reveal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                
-                <script>
-                    window.PAGE_NAME = 'assessments';
-                
-                </script>
             </div>
     
     
@@ -183,7 +167,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
-    <script src="../assets/js/app.js"></script>
+    <script src=/hack2017/assets/js/app.js"></script>
 
   </body>
 </html>

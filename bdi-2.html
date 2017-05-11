@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heads App</title>
-    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href=/hack2017/assets/css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -21,7 +21,7 @@
             <div class="row expanded app-dashboard-top-nav-bar">
                 <div class="columns medium-3">
                     <button data-toggle="app-dashboard-sidebar" class="menu-icon hide-for-medium"></button>
-                    <a href="hackathon/dashboard.html" class="app-dashboard-logo">Heads App</a>
+                    <a href="dashboard.html" class="app-dashboard-logo">Heads App</a>
                 </div>
                 <div class="columns show-for-medium">
                     <div class="app-dashboard-search-bar-container">
@@ -60,13 +60,13 @@
                         <div class="app-dashboard-sidebar-inner">
                             <ul class="menu vertical">
                                 <li>
-                                    <a href="hackathon/assessments.html" class="is-active">
+                                    <a href="javascript:localStorage.removeItem('selClient'); self.location = 'select_patients.html'" class="is-active">
                                         <i class="primary large material-icons">assessment</i>
                                         <span class="app-dashboard-sidebar-text">Assessments</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="hackathon/patients.html">
+                                    <a href="patients.html">
                                         <i class="primary material-icons">person</i><span class="app-dashboard-sidebar-text">Patients</span>
                                     </a>
                                 </li>
@@ -87,78 +87,32 @@
     
             <!-- content -->
             <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
-                <div class="row">
-                    
-                    <div class="columns large-6 small-12 medium-6">
-                        <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-inner-front assessments">
-                                    <span>Mental Health Assessments</span>
-                                </div>
-                                <div class="flip-card-inner-back">
-                                    <h3 class="flip-card-inner-back-title">Select your Assessments</h3>
-                                    <p class="flip-card-inner-back-text">Choose from this list of Pearson curated tools to assess your patients’ mental health. Each tool provides
-                a quick classification and is designed to effectively and efficiently screen for mental health challenges.</p>
-                                    <a href="#" class="button success">Build One</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 
+                <div class="bdi-2 products row">
+                    <div class="columns large-12">
+                        <div class="row bdi2">
                 
-                    <div class="columns large-6 small-12 medium-6">
-                        <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-inner-front patients">
-                                    <span>My Patients</span>
-                                </div>
-                                <div class="flip-card-inner-back">
-                                    <h3 class="flip-card-inner-back-title">Your Patients</h3>
-                                    <p class="flip-card-inner-back-text">Add a new patient to your list of those requiring a mental health screening. Or select from your list to
-                administer an assessment. Assessment results can also be accessed here for completed assessments..</p>
-                                    <a href="hackathon/patients.html" class="button primary">View Inside</a>
+                            <div id="bd2Ctr" data-toggle="bd2Modal" class="columns small-12">
+                                <div class="card">
+                                    <div class="card-divider" style="background-image: url('../../assets/img/hack/logos/beck_bdi_ii_logo.png')">
+                                        BDI - II
+                                    </div>
+                                    <div class="card-section">
+                                        <div id="bdi2Holder" class="responsive-embed full">
+                                            <!-- iframe width="420" height="auto" src="https://pearsonclinical.eu.qualtrics.com/jfe/form/SV_1IikSYAFbJJX7Vj" frameborder="0" allowfullscreen></iframe -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                
                         </div>
                     </div>
-                
-                
-                    <div class="columns large-6 small-12 medium-6">
-                        <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-inner-front network">
-                                    <span>Referral Network</span>
-                                </div>
-                                <div class="flip-card-inner-back">
-                                    <h3 class="flip-card-inner-back-title">Referrals</h3>
-                                    <p class="flip-card-inner-back-text">Enter and view a list of your local network of providers for more in-depth assessment or therapy. Add
-                
-                new providers or refer directly to any of the providers on your list.</p>
-                                    <a href="#" class="button warning">Referrals</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                
-                    <div class="columns large-6 small-12 medium-6">
-                        <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-inner-front tools">
-                                    <span>Tools</span>
-                                </div>
-                                <div class="flip-card-inner-back">
-                                    <h3 class="flip-card-inner-back-title">Tools & Settings</h3>
-                                    <p class="flip-card-inner-back-text">Import patients into the app from your Electronic Health Record (EHR), export to your EHR, generate a
-                referral and select application settings.</p>
-                                    <a href="#" class="button success">View Inside</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                
                 </div>
+                
+                
+                <script>
+                    window.PAGE_NAME = 'bdi2';
+                </script>
             </div>
     
     
@@ -208,12 +162,9 @@
     
     </div>
     
-    
-    
-    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
-    <script src="../assets/js/app.js"></script>
+    <script src=/hack2017/assets/js/app.js"></script>
 
   </body>
 </html>

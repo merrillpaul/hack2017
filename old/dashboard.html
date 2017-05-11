@@ -1,0 +1,1536 @@
+
+<!doctype html>
+<html class="no-js theme12" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heads App</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="http://saotxwl-6wczk72:2403/dpd.js"></script>
+    <base href="/hack2017/"/>
+  </head>
+  <body>
+
+    <div class="app-dashboard shrink-medium">
+        <div class="row expanded app-dashboard-top-nav-bar">
+            <div class="columns medium-3">
+                <button data-toggle="app-dashboard-sidebar" class="menu-icon hide-for-medium"></button>
+                <a  class="app-dashboard-logo">Project One</a>
+            </div>
+            <div class="columns show-for-medium">
+                <div class="app-dashboard-search-bar-container">
+                    <input class="app-dashboard-search" type="search" placeholder="Search">
+                    <i class="app-dashboard-search-icon fa fa-search"></i>
+                </div>
+            </div>
+            <div class="columns shrink app-dashboard-top-bar-actions">
+                <button onclick="self.location='index.html'" href="/" class="button hollow">Logout</button>
+                <a href="#" height="30" width="30" alt=""><i class="fa fa-info-circle"></i></a>
+            </div>
+        </div>
+        <div class="app-dashboard-body off-canvas-wrapper">
+            <div id="app-dashboard-sidebar" class="app-dashboard-sidebar position-left off-canvas off-canvas-absolute reveal-for-medium"
+                data-off-canvas>
+                <div class="app-dashboard-sidebar-title-area">
+                    <div class="app-dashboard-close-sidebar">
+                        <h3 class="app-dashboard-sidebar-block-title">Items</h3>
+    
+                        <button id="close-sidebar" data-app-dashboard-toggle-shrink class="app-dashboard-sidebar-close-button show-for-medium" aria-label="Close menu"
+                            type="button">
+    <span aria-hidden="true"><a href="#"><i class="large fa fa-angle-double-left"></i></a></span>
+    </button>
+                    </div>
+                    <div class="app-dashboard-open-sidebar">
+                        <button id="open-sidebar" data-app-dashboard-toggle-shrink class="app-dashboard-open-sidebar-button show-for-medium" aria-label="open menu"
+                            type="button">
+    <span aria-hidden="true"><a href="#"><i class="large fa fa-angle-double-right"></i></a></span>
+    </button>
+                    </div>
+                </div>
+                <div class="app-dashboard-sidebar-inner">
+                    <ul class="menu vertical">
+                        <li>
+                            <a href="modals.html" class="is-active">
+                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Modals</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alerts.html">
+                                <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Alerts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="multi-level-expand.html">
+                                <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Multi Accordion</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="expand-panels.html" class="is-active">
+                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Expand Panels</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="forms.html">
+                                <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Forms</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="buttons.html">
+                                <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Buttons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="is-active">
+                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Buildings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Time</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Industry</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>        
+             <div class="row">
+               <div class="large-12 columns">
+                 <h1>Welcome to P1 with Foundation</h1>
+               </div>
+             </div>
+             
+             <div class="row">
+               <div class="large-12 columns">
+                 <div class="callout">
+                   <h3>We&rsquo;re stoked you want to try Foundation on ProjectOne! </h3>
+                  
+              
+                 </div>
+               </div>
+             </div>
+             
+             
+             
+             <div class="row">
+               <div class="column">
+                 <div class="callout">
+                   <h4>
+                     Callout Examples
+                   </h4>
+             
+                   <div class="row">
+                     <div class="column large-centered">
+                       <h7>Trigger Notifications</h7>
+                     </div>
+                   </div>
+             
+                    <div class="row">
+                     <div class="columns small-12 medium-4 large-3 ">
+                       <a id="yay" href="#" class="hollow expanded medium success button">Yay Message</a><br/>
+                     </div>
+                     <div class="columns small-12 medium-4 large-3 ">
+                       <a id="warn" href="#" class="hollow expanded medium warning button">Shane Warne</a><br/>
+                     </div>
+                      <div class="columns small-12 medium-4 large-3 ">
+                       <a id="danger" href="#" class="hollow expanded medium alert button">Achtung!</a><br/>
+                     </div>
+                     <div class="columns small-12 medium-4 large-3 ">
+                       <a id="info" href="#" class="hollow expanded medium primary button">What?</a><br/>
+                     </div>
+                      <div class="columns small-12 medium-4 large-3 end">
+                       <a id="combo" href="#" class="hollow expanded medium primary button">Combi</a><br/>
+                     </div>
+                   </div>
+             
+                   
+             
+                   <div class="row">
+                     <div class="column large-centered">
+                       
+                       <div id="banner" data-closable data-animate="fade-in fade-out" class="callout alert-callout-border info">
+                           <span class="fa fa-info-circle"></span>
+                           <span class="content"><strong>Whoops!</strong> - You clearly did that wrong.</span>
+                           <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                       <span aria-hidden="true">&times;</span>
+                       </button>
+                       </div>
+                       <div data-closable="hinge-out-from-top" class="callout alert-callout-border alert">
+                           <span class="fa fa-times-circle"></span>
+                           <span class="content">
+                               <strong>Error</strong> - You are the error.
+                           </span>
+                           <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                       <span aria-hidden="true">&times;</span>
+                       </button>
+                       </div>
+                       <div data-closable class="callout alert-callout-border success">
+                          <span class="fa fa-check-circle"></span>     
+                           <span class="content">
+                               <strong>Yay!</strong> - You accomplished a simple task!
+                           </span>
+                           <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                       <span aria-hidden="true">&times;</span>
+                       </button>
+                       </div>
+                       <div data-closable class="callout alert-callout-border warning">
+                           <span class="fa fa-exclamation-triangle"></span>
+                           <span class="content">
+                               <strong>Caution</strong> - A word I don't understand.
+                           </span>
+                           <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                       <span aria-hidden="true">&times;</span>
+                       </button>
+                       </div>
+                       <div data-closable class="callout alert-callout-border secondary">
+                           <span class="content"><strong>Mistake</strong> - You made a mistake.</span>
+                           <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                       <span aria-hidden="true">&times;</span>
+                       </button>
+                       </div>
+                       <div data-closable class="callout alert-callout-border">
+                           <strong>Oops</strong> - The most dreadful word in nuclear physics.
+                           <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                       <span aria-hidden="true">&times;</span>
+                       </button>
+                       </div>
+                       
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="row">
+               <div class="column">
+                 <div class="callout">
+                   <h4>
+                     Breadcrumbs
+                   </h4>
+                   <div class="row">
+                     <div class="column large-centered">
+                       <nav aria-label="You are here:" role="navigation">
+                           <ul class="breadcrumbs">
+                               <li><span class="fa fa-home"></span><a href="#0">Home</a>
+                               </li>
+                               <li><a href="#0">Features</a></li>
+                               <li class="disabled">Gene Splicing</li>
+                               <li>
+                                   <span class="show-for-sr">Current: </span> Cloning
+                               </li>
+                           </ul>
+                       </nav>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="row">
+               <div class="column">
+                 <div class="callout">
+                   <h4>
+                     Tooltips
+                   </h4>
+                   <div class="row">
+                     <div class="column large-centered">
+                       <div class="row">
+                           <div class="columns">
+                               <span data-tooltip aria-haspopup="true" class="has-tip top" data-disable-hover="false" tabindex="2" title="Gear Settings.">
+                               <a href="" class="button hollow primary">
+                                   <li class="fa fa-gear"></li>
+                               </a>
+                               </span>
+                           </div>
+                       
+                       </div>
+                       
+                       <div class="row">
+                           <div class="columns small-12">
+                              Now some tooltips with white bg
+                           </div>
+                       
+                       
+                           <div class="columns">        
+                                   <span title="<p><b>Nemo enim ipsam</b></p> <p>Voluptatem quia voluptas sit aspernatur aut odit aut.</p>" 
+                                   data-allow-html="true"  data-click-open="false"  data-tooltip data-tooltip-class="tooltip alt" class="right badge defaultSecond">?</span>        
+                           </div>
+                       
+                           <div class="columns large-offset-8 large-4">        
+                                   <a  class="button primary expanded"
+                                   title="<p><b>Nemo enim ipsam</b></p> <p>Voluptatem quia voluptas sit aspernatur aut odit aut.</p>"
+                                   data-allow-html="true"  data-click-open="false"  data-tooltip data-tooltip-class="tooltip alt left"
+                                   >On the Left</a>     
+                           </div>
+                       
+                           <div class="clear columns large-offset-3 end large-3">        
+                                   <a  class="button primary expanded"
+                                   title="<p><b>Nemo enim ipsam</b></p> <p>Voluptatem quia voluptas sit aspernatur aut odit aut.</p>"
+                                   data-allow-html="true"  data-click-open="false"  data-tooltip data-tooltip-class="tooltip alt top"
+                                   >On the top</a>     
+                           </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>  
+             
+             <div class="row">
+               <div class="column">
+                 <div class="callout">
+                   <h4>
+                     Modals
+                   </h4>
+                   <div class="row">
+                     <div class="column large-centered">
+                       <div class="button-group stacked-for-small button-group-option" data-grouptype="OR">
+                           <a data-toggle="primaryModal" href="#" class="button hollow primary">Primary</a>
+                           <a data-toggle="successModal" href="#" class="button hollow success">Success</a>
+                           <a data-toggle="warningModal" href="#" class="button hollow warning">Warning</a>
+                           <a data-toggle="alertModal" href="#" class="button hollow alert">Danger</a>
+                       </div>
+                       
+                       
+                       <div class="reveal with-title primary" id="primaryModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+                           <div class="row">
+                               <div class="columns header">
+                                   <div class="header-text">Logout</div>
+                                   
+                               </div>
+                               <div class="columns content">
+                                   Are you sure you want to logout ?
+                               </div>
+                       
+                               <div class="columns footer">
+                                   <div class="row">
+                                       <div class="columns large-offset-6 medium-offset-6 large-3 medium-3" small-12>
+                                           <a data-close class="flat button "  href="#">Logout</a>
+                                       </div>
+                                       <div class="columns large -3 medium-3 small-12">
+                                           <a data-close class="default button" href="#">Cancel</a>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <button class="close-button" data-close aria-label="Close reveal" type="button">
+                           <span aria-hidden="true">&times;</span>
+                         </button>
+                       </div>
+                       
+                       
+                       <div class="reveal with-title success" id="successModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+                           <div class="row">
+                               <div class="columns header">
+                                   <div class="header-text">Create new user</div>
+                               </div>
+                               <div class="columns content">
+                                
+                                   <div class="row">
+                                       <div class="columns large-12">
+                                           <p>
+                                           <strong>You are are about to create a new user</strong>
+                                           </p>
+                                       </div>
+                                       <div class="columns large-12">
+                                           <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut. Nemo enim ipsam.</p>
+                                       </div>
+                                       <div class="columns large-12">
+                                           <p>Voluptatem quia voluptas sit aspernatur aut odit aut.</p>
+                                       </div>
+                                   </div>
+                       
+                               </div>
+                       
+                               <div class="columns footer">
+                                   <div class="row">
+                                       <div class="columns large-offset-6 medium-offset-6 large-3 medium-3" small-12>
+                                           <a data-close class="flat button " href="#">Cancel</a>
+                                       </div>
+                                       <div class="columns large -3 medium-3 small-12">
+                                           <a data-close class=" button default" href="#">Create user</a>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <button class="close-button" data-close aria-label="Close reveal" type="button">
+                           <span aria-hidden="true">&times;</span>
+                         </button>
+                       </div>
+                       
+                       
+                       <div class="reveal with-title warning" id="warningModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+                           <div class="row">
+                               <div class="columns header">
+                                   <div class="header-text">Connect to WiFi</div>
+                               </div>
+                               <div class="columns content">
+                                
+                                   <div class="row">
+                                       <div class="columns large-12">
+                                           <p>
+                                           <strong>WiFi Connection</strong>
+                                           </p>
+                                       </div>
+                                       <div class="columns large-12">
+                                           <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut. Nemo enim ipsam.</p>
+                                       </div>            
+                                   </div>
+                       
+                               </div>
+                       
+                               <div class="columns footer">
+                                   <div class="row">
+                                       <div class="columns large-offset-6 medium-offset-6 large-3 medium-3" small-12>
+                                           <a data-close class="flat button " href="#">Cancel</a>
+                                       </div>
+                                       <div class="columns large -3 medium-3 small-12">
+                                           <a data-close class=" button default" href="#">Got it</a>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <button class="close-button" data-close aria-label="Close reveal" type="button">
+                           <span aria-hidden="true">&times;</span>
+                         </button>
+                       </div>
+                       
+                       <div class="reveal with-title alert" id="alertModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+                           <div class="row">
+                               <div class="columns header">
+                                   <div class="header-text">Delete User</div>
+                               </div>
+                               <div class="columns content">
+                                
+                                   <div class="row">
+                                       <div class="columns large-12">
+                                           <p>
+                                           <strong>Are you sure you want to delete this user? </strong>
+                                           </p>
+                                       </div>
+                                       <div class="columns large-12">
+                                           <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut. Nemo enim ipsam.</p>
+                                       </div>            
+                                   </div>
+                       
+                               </div>
+                       
+                               <div class="columns footer">
+                                   <div class="row">
+                                       <div class="columns large-offset-6 medium-offset-6 large-3 medium-3" small-12>
+                                           <a data-close class=" button " href="#">Cancel</a>
+                                       </div>
+                                       <div class="columns large -3 medium-3 small-12">
+                                           <a data-close class=" button default" href="#">Delete user</a>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <button class="close-button" data-close aria-label="Close reveal" type="button">
+                           <span aria-hidden="true">&times;</span>
+                         </button>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="row">
+               <div class="column large-12">
+                 <div class="callout">
+                   <h4>
+                     Buttons
+                   </h4>
+                   <div class="row">        
+                       <div class="large-12 columns">
+                           <h5>Try one of these buttons:</h5>
+                           <p><a href="#" class="button default">Default</a><br/>
+                               <a href="#" class="primary button">Primary</a><br/>
+                               <a href="#" class="medium success button">Confirm</a><br/>
+                               <a href="#" class=" hollow medium alert button">Delete</a><br/>
+                               <a href="#" class=" hollow medium success button">Confirm</a><br/>
+                               <a href="#" class="medium warning button">Warning</a><br/>
+                               <a href="#" class="medium secondary button">Secondary Btn</a>
+                               <a href="#" class="medium  disabled button">Disabled</a>
+                               <a href="#" class="medium flat button">Flat Default</a>
+                               <a href="#" class="medium warning  flat button">Flat Warning</a>
+                           </p>
+                       </div>
+                       
+                       <div class="large-12 columns">
+                           <h5>Try one of these badge buttons:</h5>
+                           <div class="row">
+                               <div class="columns large-3 medium-4 small-12">
+                                   <a href="#" class="expanded button">Default <span class="badge">12</span></a>
+                               </div>
+                               <div class="columns large-3 medium-4 small-12">
+                                   <a href="#" class="expanded success button">Success <span class="badge">123</span></a>
+                               </div>
+                                <div class="columns large-3 medium-4 small-12">
+                                   <a href="#" class="expanded warning  button">Warning <span class="badge"><i class="fa fa-wrench"></i></span></a>
+                               </div>
+                                <div class="columns large-3 medium-4 small-12 end">
+                                   <a href="#" class="expanded button"><i class="success fa fa-check"></i> Check</a>
+                               </div>
+                           </div>
+                            <div class="row">
+                                 <div class="columns large-3 medium-4 small-12">
+                                   <a href="#" class="expanded button">Default Hollow<span class="badge">12</span></a>
+                               </div>
+                               <div class="columns large-3 medium-4 small-12">
+                                   <a href="#" class="hollow expanded button warning"><i class="warning fa fa-warning"></i> Warn Badge
+                                   <span class="badge">23</span></a>
+                               </div>
+                               <div class="columns large-3 medium-4 small-12 end">
+                                   <a href="#" class="hollow expanded button alert"><i class="alert fa fa-warning"></i> Danger</a>
+                               </div>       
+                           </div>
+                       </div>
+                       
+                       
+                       
+                       <div class="columns large-6 end"> 
+                           <div class="callout">
+                               <h5>Toggle</h5>
+                               <div class="toggle-group" data-toggle-button-group>
+                                 <button class="button is-active"><i class="success fa fa-check" aria-hidden="true"></i> People</button>
+                                 <button class="button">Tags</button>
+                                 <button class="button">Social</button>
+                               </div>
+                               
+                               
+                               
+                           </div>       
+                       </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="row">
+               <div class="column large-12">
+                 <div class="callout">
+                   <h4>
+                     CSS Arrow Panels
+                   </h4>
+                   <div class="row">  
+                     <div class="columns large-12">
+                        <div class="callout block" >
+                            <div class="block-vertical">
+                                <div class="block-vertical-quote">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris
+                                        bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique
+                                        sem rutrum.</p>
+                                </div>
+                            </div>
+                        
+                            <div class="block-vertical">
+                                <div class="block-vertical-quote">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris
+                                        bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique
+                                        sem rutrum.</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>      
+                        
+                   </div>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="row">
+               <div class="column large-12">
+                 <div class="callout">
+                   <h4>
+                     Expand Panels
+                   </h4>
+                   <div class="row">  
+                     <div class="columns large-12">
+                        <ul class="accordion expand-panel-container" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                        
+                          <li class="accordion-item is-active" data-accordion-item>
+                            <!-- Accordion tab title -->
+                            <a  class="secondary accordion-title">
+                                <span class="accordion-title-row">
+                        
+                                    <span class="columns icon  small-1">
+                                        <span class="row">
+                                           <span class="columns">
+                                               <img src=/hack2017/assets/img/expand-thumb.png"/>
+                                            </span>                   
+                                       </span>
+                                    </span> 
+                        
+                                   <span class="columns  small-5">
+                                       <span class="row">
+                                           <span class="columns">
+                                                <strong>R - BANS Subtest name</strong>
+                                            </span>
+                                            <span class="columns">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i> 12 mins
+                                            </span>
+                                       </span>
+                                    </span> 
+                        
+                                    <span class="columns  small-6">
+                                       <span class="row">
+                                           <span class="columns medium-offset-3 large-offset-6 medium-3 small-2">
+                                                <span class="label secondary">WAITING</span>
+                                            </span>
+                                            <span class="columns medium-3 small-2">
+                                                _<i class="fa fa-pencil" aria-hidden="true"></i> Edit
+                                            </span>
+                                       </span>
+                                    </span>       
+                                </span>
+                            </a>
+                            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                            <div class="accordion-content sublevel-1" data-tab-content>
+                              
+                                <div class="row">
+                                    <div class="columns">
+                                       <h6>Deeply integrated into the core. This limits your freedom in decreasing the amount of code. Integrated and installed into the core.</h6>
+                                    </div>
+                                </div>     
+                              
+                                <div class="row">
+                                      <div class="columns">
+                                          <h6>Please Select</h6>
+                                      </div>
+                                </div>
+                        
+                                 <div class="row">
+                                      <div class="columns">
+                                          <div class="toggle-group" data-toggle-button-group>
+                                            <button class="button is-active"><i class="success fa fa-check" aria-hidden="true"></i> People</button>
+                                            <button class="button">Tags</button>
+                                            <button class="button">Social</button>
+                                          </div>
+                                          
+                                          
+                                          
+                                      </div>
+                                </div>
+                        
+                               
+                                <p></p>
+                        
+                                 <div class="row">
+                                      <div class="columns">
+                                          <h6>Enter Parents Email address</h6>
+                                      </div>
+                                      <div class="columns">
+                                          <input type="email"/>
+                                      </div>
+                                       <div class="columns">
+                                          <a class="primary" href=""><h6>+ Add another email address</h6></a>
+                                      </div>
+                                </div>
+                        
+                                 <div class="row">
+                                      <div class="columns large-offset-8 medium-offset-4 medium-4 large-2 small-12">
+                                           <a  class="button expanded backout" href="#">Cancel</a>
+                                      </div>
+                                       <div class="columns large-2 medium-4 small-12">
+                                             <a  class="button expanded success" href="#">Save</a>
+                                      </div>
+                                </div>
+                              <div>
+                          </li>
+                        
+                         <li class="accordion-item is-active" data-accordion-item>
+                            <!-- Accordion tab title -->
+                            <a  class="accordion-title">
+                                <span class="accordion-title-row">
+                                     <span class="columns icon  small-1">
+                                        <span class="row">
+                                           <span class="columns">
+                                               <img src=/hack2017/assets/img/expand-thumb1.png"/>
+                                            </span>                   
+                                       </span>
+                                    </span> 
+                                   <span class="columns  small-5">
+                                       <span class="row">
+                                           <span class="columns">
+                                                <strong>KTEA Form A</strong>
+                                            </span>
+                                            <span class="columns">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i> 12 mins
+                                            </span>
+                                       </span>
+                                    </span> 
+                        
+                                    <span class="columns  small-6">
+                                       <span class="row">
+                                           <span class="columns medium-offset-3 large-offset-6 medium-3 small-2">
+                                                <span class="label success">READY</span>
+                                            </span>
+                                            <span class="columns medium-3 small-2">
+                                                _<i class="fa fa-pencil" aria-hidden="true"></i> Edit
+                                            </span>
+                                       </span>
+                                    </span>       
+                                </span>
+                            </a>
+                            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                            <div class="accordion-content sublevel-1" data-tab-content>
+                              
+                                <div class="row">
+                                    <div class="columns">
+                                        <h6>Deeply integrated into the core. This limits your freedom in decreasing the amount of code. Integrated and installed into the core.</h6>
+                                    </div>
+                                </div>     
+                              
+                                <div class="row">
+                                      <div class="columns">
+                                          <h6>Please Select</h6>
+                                      </div>
+                                </div>
+                        
+                                 <div class="row">
+                                      <div class="columns">
+                                          <div class="toggle-group" data-toggle-button-group>
+                                            <button class="button is-active"><i class="success fa fa-check" aria-hidden="true"></i> People</button>
+                                            <button class="button">Tags</button>
+                                            <button class="button">Social</button>
+                                          </div>
+                                          
+                                          
+                                          
+                                      </div>
+                                </div>
+                        
+                               
+                                <p></p>
+                        
+                                 <div class="row">
+                                      <div class="columns">
+                                          <h6>Enter Parents Email address</h6>
+                                      </div>
+                                      <div class="columns">
+                                          <input type="email"/>
+                                      </div>
+                                       <div class="columns">
+                                          <a class="primary" href=""><h6>+ Add another email address</h6></a>
+                                      </div>
+                                </div>
+                        
+                                 <div class="row">
+                                      <div class="columns large-offset-8 medium-offset-4 medium-4 large-2 small-12">
+                                           <a  class="button expanded backout" href="#">Cancel</a>
+                                      </div>
+                                       <div class="columns large-2 medium-4 small-12">
+                                             <a  class="button expanded success" href="#">Save</a>
+                                      </div>
+                                </div>
+                              <div>
+                          </li>
+                         
+                        </ul>
+                     </div>      
+                        
+                   </div>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="row">
+               <div class="column large-12">
+                 <div class="callout">
+                   <h4>
+                     Multilevel expand/collapse
+                   </h4>
+                   <div class="row">  
+                     <div class="columns large-12">
+                        <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
+                          <li>
+                            <a href="#">Item 1</a>
+                            <ul class="menu vertical sublevel-1">
+                              <li>
+                                <a href="#">
+                                  Sub Item
+                                  <!-- pan class="row expanded">
+                                    <span class="columns small-3">Sub Item1</span>
+                                    <span class="columns small-3 end">Sub Item1</span>
+                                  </span -->
+                                </a>
+                                <ul class="menu vertical sublevel-2">
+                                  <li><a class="subitem" href="#">Thing 1</a></li>
+                                  <li><a class="subitem" href="#">Thing 2</a></li>
+                                  <li><a class="subitem" href="#">Thing 3</a></li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#">Sub-item 2</a>
+                                <ul class="menu vertical sublevel-2">
+                                  <li>
+                                    <a href="#">Super-sub-item 1</a>
+                                    <ul class="menu vertical sublevel-3">
+                                      <li><a class="subitem" href="#">Thing 1</a></li>
+                                      <li><a class="subitem" href="#">Thing 2</a></li>
+                                    </ul>
+                                  </li>
+                                  <li><a class="subitem" href="#">Thing 2</a></li>
+                                </ul>
+                              </li>
+                              <li><a class="subitem" href="#">Thing 1</a></li>
+                              <li><a class="subitem" href="#">Thing 2</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">Item 2</a>
+                            <ul class="menu vertical sublevel-1">
+                              <li><a class="subitem" href="#">Thing 1</a></li>
+                              <li><a class="subitem" href="#">Thing 2</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">Item 3</a>
+                            <ul class="menu vertical sublevel-1">
+                              <li><a class="subitem" href="#">Thing 1</a></li>
+                              <li><a class="subitem" href="#">Thing 2</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">Item 4</a>
+                            <ul class="menu vertical sublevel-1">
+                              <li>
+                                <a href="#">Sub-item 3</a>
+                                <ul class="menu vertical sublevel-2">
+                                  <li><a class="subitem" href="#">Thing 1</a></li>
+                                  <li><a class="subitem" href="#">Thing 2</a></li>
+                                </ul>
+                              </li>
+                              <li><a class="subitem" href="#">Thing 1</a></li>
+                              <li><a class="subitem" href="#">Thing 2</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                        
+                        
+                     </div>      
+                        
+                   </div>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="row">
+               <div class="column large-12">
+                 <div class="callout">
+                   
+                     <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+                   
+                   <div class="row">  
+                     <div class="columns large-12">
+                        <form>
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <label>Input Label</label>
+                                    <input type="text" placeholder="large-12.columns" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-4 medium-4 columns">
+                                    <label>Input Label</label>
+                                    <input type="text" placeholder="large-4.columns" />
+                                </div>
+                                <div class="large-4 medium-4 columns">
+                                    <label>Input Label</label>
+                                    <input type="text" placeholder="large-4.columns" />
+                                </div>
+                                <div class="large-4 medium-4 columns">
+                                    <div class="row collapse">
+                                        <label>Input Label</label>
+                                        <div class="input-group">
+                                            <input class="input-group-field" type="text" placeholder="input-group" />
+                                            <span class="input-group-label">.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-4 medium-4 columns">
+                                    <label>Disabled</label>
+                                    <input type="text" disabled placeholder="disabled" />
+                                </div>
+                        
+                                <div class="large-4 medium-4 columns">
+                                    <div class="row collapse">
+                                        <label>Input with Icon</label>
+                                        <div class="input-group has-icon">
+                                            <input class="input-group-field" type="text" placeholder="input icon" />
+                                            <span class="input-group-label icon"><li class="fa fa-search"></li></span>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="large-4 medium-4 columns">
+                                    <div class="row collapse">
+                                        <label>Disabled Input with Icon</label>
+                                        <div class="input-group has-icon">
+                                            <input class="input-group-field" type="text" disabled placeholder="input icon" />
+                                            <span class="input-group-label icon"><li class="fa fa-search"></li></span>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="large-4 medium-4 columns">
+                                    <div class="row collapse">
+                                        <label>Input Label</label>
+                                        <div class="input-group disabled">
+                                            <input class="input-group-field" type="text" disabled placeholder="disabled group" />
+                                            <span class="input-group-label">.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        
+                            <div class="row">
+                                <div class="column large-6">
+                                    <div class="callout">
+                                        <h4>
+                                            Labels to the side
+                                        </h4>
+                                        <div class="row">
+                                            <div class="columns large-12">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="small-12 medium-3 columns">
+                                                            <label for="middle-label1" class=" middle">Label</label>
+                                                        </div>
+                                                        <div class="small-12 medium-9 columns">
+                                                            <input type="text" id="middle-label1" placeholder="Left- and middle-aligned text input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="small-12 medium-3  columns">
+                                                            <label for="middle-label2" class=" middle">Label</label>
+                                                        </div>
+                                                        <div class="small-12 medium-9 columns">
+                                                            <input type="text" id="middle-label2" placeholder=" middle-aligned text input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="small-12 medium-3 columns">
+                                                            <label for="middle-label3">With Icon and some longer text</label>
+                                                        </div>
+                                                        <div class="small-12 medium-9 columns">
+                                                            <div class="input-group has-icon">
+                                                                <input id="middle-label3" class="input-group-field" type="text" placeholder="input icon" />
+                                                                <span class="input-group-label icon"><li class="fa fa-check"></li></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                               <div class="row">
+                                    <div class="column large-12">
+                                        <div class="callout">
+                                            <h4>
+                                                Checks and Radios
+                                            </h4>
+                                            <div class="row">
+                            
+                                                <div class="columns large-6 small-12">
+                                                    <fieldset class="fieldset">
+                                                        <legend>Simple Checkboxes</legend>
+                                                        <div class="checkbox">
+                                                            <input id="checkbox1" class="styled" type="checkbox">
+                                                            <label for="checkbox1">
+                                                        Default
+                                                        </label>
+                                                        </div>
+                                                        <div class="checkbox primary">
+                                                            <input id="checkbox2" class="styled" type="checkbox" checked>
+                                                            <label for="checkbox2">
+                                                        Primary
+                                                    </label>
+                                                        </div>
+                                                        <div class="checkbox success">
+                                                            <input id="checkbox3" class="styled" type="checkbox">
+                                                            <label for="checkbox3">
+                                                        Success
+                                                    </label>
+                                                        </div>
+                                                        <div class="checkbox secondary">
+                                                            <input id="checkbox4" class="styled" type="checkbox">
+                                                            <label for="checkbox4">
+                                                        Secondary
+                                                    </label>
+                                                        </div>
+                                                        <div class="checkbox warning">
+                                                            <input id="checkbox5" type="checkbox" class="styled" checked>
+                                                            <label for="checkbox5">
+                                                        Warning
+                                                    </label>
+                                                        </div>
+                                                        <div class="checkbox alert">
+                                                            <input id="checkbox6" type="checkbox" class="styled" checked>
+                                                            <label for="checkbox6">
+                                                        Check me out
+                                                    </label>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                            
+                                                <div class="columns large-6 small-12">
+                                                    <fieldset class="fieldset">
+                                                        <legend>Alternate Checkboxes</legend>
+                                                        <div class="callout">
+                                                            <h7>Hey ma, no labels</h7>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" class="styled" id="singleCheckbox1" value="option1" aria-label="Single checkbox One">
+                                                                <label></label>
+                                                            </div>
+                                                            <div class="checkbox success">
+                                                                <input type="checkbox" class="styled styled-success" id="singleCheckbox2" value="option2" checked aria-label="Single checkbox Two">
+                                                                <label></label>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="callout">
+                                                            <h7>My Way or the highway or ?</h7>
+                                                            <div class="checkbox primary">
+                                                                <input class="styled" type="checkbox" onclick="changeState(this)">
+                                                                <label></label>
+                                                            </div>
+                                                            <div class="checkbox alert">
+                                                                <input class="styled" type="checkbox" onclick="changeState(this)">
+                                                                <label>Cant decide ?</label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                            
+                                            </div>
+                            
+                                            <div class="row">
+                                                <div class="columns large-6 small-12">
+                                                    <fieldset class="fieldset">
+                                                        <legend>Inline Checkboxes</legend>
+                                                        <div class="checkbox checkbox-inline">
+                                                            <input type="checkbox" class="styled" id="inlineCheckbox1" value="option1">
+                                                            <label for="inlineCheckbox1"> Inline One </label>
+                                                        </div>
+                                                        <div class="checkbox success checkbox-inline">
+                                                            <input type="checkbox" class="styled" id="inlineCheckbox2" value="option1" checked>
+                                                            <label for="inlineCheckbox2"> Inline Two </label>
+                                                        </div>
+                                                        <div class="checkbox warning checkbox-inline">
+                                                            <input type="checkbox" class="styled" id="inlineCheckbox3" value="option1">
+                                                            <label for="inlineCheckbox3"> Inline Three </label>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="columns large-6 small-12">
+                                                    <fieldset class="fieldset">
+                                                        <legend>Checkboxes go round and round, round and ...</legend>
+                                                        <div class="checkbox checkbox-circle success">
+                                                            <input id="checkbox7" class="styled" type="checkbox" checked>
+                                                            <label for="checkbox7">
+                                                                Simply Rounded
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox secondary checkbox-circle">
+                                                            <input id="checkbox8" class="styled" type="checkbox" checked>
+                                                            <label for="checkbox8">
+                                                                Me too
+                                                        </label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-circle alert">
+                                                            <input id="checkbox7" class="styled" type="checkbox">
+                                                            <label for="checkbox7">
+                                                                Boom!
+                                                            </label>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset class="fieldset">
+                                                        <legend>Checkboxes go quack quack quack...</legend>
+                                                        <div class="checkbox checkbox-circle checkbox-inline">
+                                                            <input id="checkbox7" class="styled" type="checkbox" checked>
+                                                            <label for="checkbox7">
+                                                                Simply Rounded
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox secondary checkbox-circle checkbox-inline">
+                                                            <input id="checkbox8" class="styled" type="checkbox" checked>
+                                                            <label for="checkbox8">
+                                                                Me too
+                                                        </label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-circle checkbox-inline alert">
+                                                            <input id="checkbox7" class="styled" type="checkbox">
+                                                            <label for="checkbox7">
+                                                                Boom!
+                                                            </label>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="row">
+                                                <div class="columns large-6 small-12">
+                                                    <fieldset class="fieldset">
+                                                        <legend>Cant touch this!</legend>
+                                                        <div class="checkbox">
+                                                            <input class="styled" id="checkbox9" type="checkbox" disabled>
+                                                            <label for="checkbox9">
+                                                        Can't check this
+                                                    </label>
+                                                        </div>
+                                                        <div class="checkbox success">
+                                                            <input class="styled styled" id="checkbox10" type="checkbox" disabled checked>
+                                                            <label for="checkbox10">
+                                                        This too
+                                                    </label>
+                                                        </div>
+                                                        <div class="checkbox warning checkbox-circle">
+                                                            <input class="styled" id="checkbox11" type="checkbox" disabled checked>
+                                                            <label for="checkbox11">
+                                                        And this
+                                                    </label>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="columns">
+                                                                <fieldset class="fieldset">
+                                                                    <legend>In line</legend>
+                                                                    <div class="checkbox checkbox-inline">
+                                                                        <input class="styled" id="checkbox9" type="checkbox" disabled>
+                                                                        <label for="checkbox9">
+                                                        Can't check this
+                                                    </label>
+                                                                    </div>
+                                                                    <div class="checkbox alert checkbox-inline">
+                                                                        <input class="styled styled" id="checkbox10" type="checkbox" disabled checked>
+                                                                        <label for="checkbox10">
+                                                        This too
+                                                    </label>
+                                                                    </div>
+                                                                    <div class="checkbox secondary checkbox-circle checkbox-inline">
+                                                                        <input class="styled" id="checkbox11" type="checkbox" disabled checked>
+                                                                        <label for="checkbox11">
+                                                        And this
+                                                    </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                            
+                                            </div>
+                            
+                            
+                                            <div class="row">
+                                                <div class="columns">
+                                                    <div class="callout">
+                                                        <h5>Radios</h5>
+                                                            <div class="row">
+                                                                <div class="columns large-3 small-6">
+                                                                    <fieldset class="fieldset">
+                                                                        <legend>Simple Radio</legend>
+                                                                         <div class="radio">
+                                                                            <input type="radio" name="radio1" id="radio1" value="option1" checked>
+                                                                            <label for="radio1">
+                                                                                Small
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="radio">
+                                                                            <input type="radio" name="radio1" id="radio2" value="option2">
+                                                                            <label for="radio2">
+                                                                                Big
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="radio alert">
+                                                                            <input type="radio" name="radio2" id="radio3" value="option1">
+                                                                            <label for="radio3">
+                                                                                Next
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="radio success">
+                                                                            <input type="radio" name="radio2" id="radio4" value="option2" checked>
+                                                                            <label for="radio4">
+                                                                                One
+                                                                            </label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                            </div>
+                                                            <div class="columns large-6 small-6 end">
+                                                                    <fieldset class="fieldset">
+                                                                        <legend>Inline Radio</legend>
+                                                                        <div class="radio secondary radio-inline">
+                                                                            <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked>
+                                                                            <label for="inlineRadio1"> Inline One </label>
+                                                                        </div>
+                                                                        <div class="radio radio-inline">
+                                                                            <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                                                                            <label for="inlineRadio2"> Inline Two </label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                            </div>
+                                                            
+                                                        </div>
+                            
+                                                        <div class="row">
+                                                            
+                                                            <div class="columns large-3 small-12">
+                                                                
+                                                                    <fieldset class="fieldset">
+                                                                        <legend>No Labels</legend>
+                                                                        <div class="radio">
+                                                                            <input type="radio" id="singleRadio1" value="option1" name="radioSingle1" aria-label="Single radio One">
+                                                                            <label></label>
+                                                                        </div>
+                                                                        <div class="radio success">
+                                                                            <input type="radio" id="singleRadio2" value="option2" name="radioSingle1" checked aria-label="Single radio Two">
+                                                                            <label></label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                
+                                                            </div>
+                            
+                                                            <div class="columns large-3 small-12">
+                                                                <fieldset class="fieldset">
+                                                                        <legend>Disabled</legend>
+                                                                         <div class="radio alert">
+                                                                            <input type="radio" name="radio3" id="radio5" value="option1" disabled>
+                                                                            <label for="radio5">
+                                                                                Next
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="radio warning">
+                                                                            <input type="radio" name="radio3" id="radio6" value="option2" checked disabled>
+                                                                            <label for="radio6">
+                                                                                One
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="radio alert">
+                                                                            <input type="radio" name="radio3" id="radio6" value="option2" disabled>
+                                                                            <label for="radio6">
+                                                                                One
+                                                                            </label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                            </div>
+                                                            <div class="columns large-6 end">
+                                                                <fieldset class="fieldset">
+                                                                        <legend>To radio or check is the question..</legend>
+                                                                        <div class="callout">
+                                                                            <h7>Radio behave check</h7>
+                                                                            <div class="checkbox">
+                                                                                <input type="radio" name="radio4" id="radio7" value="option1" checked>
+                                                                                <label for="radio7">
+                                                                                    Default
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="checkbox success">
+                                                                                <input type="radio" name="radio4" id="radio8" value="option2">
+                                                                                <label for="radio8">
+                                                                                    Success
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="checkbox alert">
+                                                                                <input type="radio" name="radio4" id="radio9" value="option3">
+                                                                                <label for="radio9">
+                                                                                    Danger
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>                                            
+                                                                    </fieldset>
+                                                            </div>
+                                                        </div>
+                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <!-- div class="row">
+                                                <div class="columns">
+                                                    <div class="callout">
+                                                        <h6>Validations</h6>
+                                                        <div class="row">
+                                                            <div class="columns large-offset-6 large-6">
+                                                                 <div class="form-fld invalid">
+                                                                    <div class="checkbox warning">
+                                                                            <input id="checkbox5" type="checkbox" class="styled" checked>
+                                                                            <label for="checkbox5">
+                                                                            Warning
+                                                                            </label>
+                                                                    </div>
+                                                                    <div class="checkbox alert">
+                                                                            <input id="checkbox6" type="checkbox" class="styled" checked>
+                                                                            <label for="checkbox6">
+                                                                                Check me out
+                                                                            </label>
+                                                                    </div>
+                                                                    <div class="fld-error-ctr">
+                                                                        <div class="form-error title">
+                                                                            Can you see the ...
+                                                                        </div>
+                                                                        <div class="form-error success">
+                                                                            Yoohoo , you seem to have crossed that one out
+                                                                        </div>
+                                                                        <div class="form-error warning">
+                                                                            Although I am not so sure
+                                                                        </div>
+                                                                        <div class="form-error alert">
+                                                                            Well, you should be more careful
+                                                                        </div>
+                                                                    </div>
+                                                                 </div>   
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="columns column-block">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>                        
+                                                </div>
+                                            </div -->
+                            
+                                        </div>
+                            
+                                    </div>
+                                </div>
+                            
+                        
+                            <div class="row">
+                                <div class="column large-12">
+                                    <div class="callout">
+                                        <h4>
+                                            Validations
+                                        </h4>
+                                        <div class="row">
+                        
+                                            <form id="validationExample" novalidate>
+                                                <div class="large-4 medium-4 columns">
+                                                    <div class="form-fld invalid">
+                                                        <label>Last name</label>
+                                                        <div class="input-group">
+                                                            <input class="input-group-field " type="text" placeholder="" />
+                                                            <span class="input-group-label">.com</span>
+                                                        </div>
+                                                        <div class="fld-error-ctr">
+                                                            <div class="form-error warning">
+                                                                Please fill this void
+                                                            </div>
+                                                        </div>
+                                                        <p class="help-text" id="exampleHelpText">Here's how you use this input field!</p>
+                                                    </div>
+                                                </div>
+                                                <div class="large-4 medium-4 columns">
+                                                    <div class="form-fld">
+                                                        <label>Email</label>
+                                                        <input type="text" class="" placeholder="" />
+                                                        <span class="form-error is-visible">This field is required.</span>
+                                                    </div>
+                                                </div>
+                        
+                                                <div class="large-4 medium-4 columns">
+                                                    <div class="form-fld">
+                                                        <label>Password </label>
+                                                        <div class="input-group has-icon ">
+                                                            <input id="middle-label3" class="input-group-field " type="text" placeholder="multi validation with header" />
+                                                            <span class="input-group-label icon"><li class="fa fa-check"></li></span>
+                                                        </div>
+                                                        <div class="fld-error-ctr">
+                                                            <div class="form-error title">
+                                                                Password must fit
+                                                            </div>
+                                                            <div class="form-error success">
+                                                                At least one capital letter
+                                                            </div>
+                                                            <div class="form-error success">
+                                                                At least one number
+                                                            </div>
+                                                            <div class="form-error alert">
+                                                                Should be at least 8 characters
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <label>Select Box</label>
+                                    <select>
+                                    <option value="husker">Husker</option>
+                                    <option value="starbuck">Starbuck</option>
+                                    <option value="hotdog">Hot Dog</option>
+                                    <option value="apollo">Apollo</option>
+                                  </select>
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <label>Textarea Label</label>
+                                    <textarea placeholder="small-12.columns"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                     </div>      
+                        
+                   </div>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="row">
+               <div class="large-8 medium-8 columns">
+                 <h5>Here&rsquo;s your basic grid:</h5>
+                 <!-- Grid Example -->
+             
+                 <div class="row">
+                   <div class="large-12 columns">
+                     <div class="primary callout">
+                       <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you
+                         can see where the columns are - it's not required at all for the grid.</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="row">
+                   <div class="large-6 medium-6 columns">
+                     <div class="primary callout">
+                       <p>Six columns</p>
+                     </div>
+                   </div>
+                   <div class="large-6 medium-6 columns">
+                     <div class="primary callout">
+                       <p>Six columns</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="row">
+                   <div class="large-4 medium-4 small-4 columns">
+                     <div class="primary callout">
+                       <p>Four columns</p>
+                     </div>
+                   </div>
+                   <div class="large-4 medium-4 small-4 columns">
+                     <div class="primary callout">
+                       <p>Four columns</p>
+                     </div>
+                   </div>
+                   <div class="large-4 medium-4 small-4 columns">
+                     <div class="primary callout">
+                       <p>Four columns</p>
+                     </div>
+                   </div>
+                 </div>
+             
+                 <hr />
+             
+                
+                
+               </div>
+             
+             
+             
+             </div>
+             
+             
+            </div>
+        </div>
+    </div>
+    
+    
+     <div class="notifications dashboard">
+     
+     <div id="alert" data-closable="hinge-out-from-top" class="hidden callout alert-callout-border alert">
+         <span class="fa fa-times-circle"></span>
+         <span class="content">
+             <strong>Error</strong> - You are the error.
+         </span>
+         <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+     <span aria-hidden="true">&times;</span>
+     </button>
+     </div>
+     
+     <div id="success" data-closable="hinge-out-from-top" data-closable class="callout alert-callout-border success">
+        <span class="fa fa-check-circle"></span>     
+         <span class="content">
+             <strong>Yay!</strong> - You accomplished a simple task!
+         </span>
+         <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+     <span aria-hidden="true">&times;</span>
+     </button>
+     </div>
+     
+     <div id="warning" data-closable="hinge-out-from-top" class="callout alert-callout-border warning">
+         <span class="fa fa-exclamation-triangle"></span>
+         <span class="content">
+             <strong>Caution</strong> - A word I don't understand.
+         </span>
+         <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+     <span aria-hidden="true">&times;</span>
+     </button>
+     </div>
+     
+     <div id="info" data-closable="hinge-out-from-top" class="callout alert-callout-border info">
+         <span class="fa fa-info-circle"></span>
+         <span class="content"><strong>Whoops!</strong> - You clearly did that wrong.</span>
+         <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+     <span aria-hidden="true">&times;</span>
+     </button>
+     </div>
+     
+     </div>
+    <div class="contact-panel" id="contact-panel" data-toggler=".is-active">
+      <a class="contact-panel-button" data-toggle="contact-panel">Contact us</a>
+      <form action="">
+        <div class="row">
+          <label>Full name *
+            <input type="text" placeholder="Full name">
+          </label>
+        </div>
+        <div class="row">
+          <label>Email *
+            <input type="email" placeholder="Email address">
+          </label>
+        </div>
+        <div class="row">
+          <label>Message *
+            <textarea placeholder="Describe your needs" rows="3"></textarea>
+          </label>
+        </div>
+        <div class="contact-panel-actions">
+          <button class="cancel-button" data-toggle="contact-panel">Nevermind</button>
+          <input type="submit" class="button submit-button" value="Submit">
+        </div>
+      </form>
+    </div>
+    
+    
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+    <script src="../assets/js/app.js"></script>
+
+  </body>
+</html>

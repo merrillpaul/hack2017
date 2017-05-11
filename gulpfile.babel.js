@@ -10,6 +10,8 @@ import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
 import ghPages  from 'gulp-gh-pages';
+import replace  from 'gulp-replace';
+
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -35,12 +37,22 @@ gulp.task('default',
 
 
 gulp.task('publish',
-  gulp.series(clean , 'build', publish, clean));
+  gulp.series(clean , 'build',  basehrefix, publish, clean));
 
 function publish() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 };
+
+
+function basehrefix() {
+  return gulp.src('./dist/**/*.html')
+  .pipe(replace(/<base href=\"\/\"/g, '<base href="/hack2017/"'))
+  //.pipe(replace(/=\"assets\//g, "=/hack2017/assets/"))
+  //.pipe(replace(/=\"..assets\//g, "=/hack2017/assets/"))
+  .pipe(gulp.dest('./dist'));
+}
+
 
 // Delete the "dist" folder
 // This happens every time a build starts

@@ -50,6 +50,7 @@
   },
   "private": true,
   "dependencies": {
-    "css-ripple-effect": "^1.0.5"
+    "css-ripple-effect": "^1.0.5",
+    "gulp-replace": "^0.5.4"
   }
 }

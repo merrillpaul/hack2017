@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <script src="http://saotxwl-6wczk72:2403/dpd.js"></script>
+    <base href="/"/>
   </head>
   <body>
 
@@ -20,7 +21,7 @@
             <div class="row expanded app-dashboard-top-nav-bar">
                 <div class="columns medium-3">
                     <button data-toggle="app-dashboard-sidebar" class="menu-icon hide-for-medium"></button>
-                    <a href="../hackathon/dashboard.html" class="app-dashboard-logo">Heads App</a>
+                    <a href="hackathon/dashboard.html" class="app-dashboard-logo">Heads App</a>
                 </div>
                 <div class="columns show-for-medium">
                     <div class="app-dashboard-search-bar-container">
@@ -59,13 +60,13 @@
                         <div class="app-dashboard-sidebar-inner">
                             <ul class="menu vertical">
                                 <li>
-                                    <a href="/hackathon/assessments.html" class="is-active">
+                                    <a href="hackathon/assessments.html" class="is-active">
                                         <i class="primary large material-icons">assessment</i>
                                         <span class="app-dashboard-sidebar-text">Assessments</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/hackathon/patients.html">
+                                    <a href="hackathon/patients.html">
                                         <i class="primary material-icons">person</i><span class="app-dashboard-sidebar-text">Patients</span>
                                     </a>
                                 </li>
@@ -120,8 +121,8 @@
                 
                 
                 <div class="fullscreen reveal" id="bd2Modal" data-reveal data-close-on-click="true" data-animation-in="spin-in" data-animation-out="spin-out">
-                 <div class="responsive-embed" style="height: 100%">
-                    <iframe width="420"  src="https://pearsonclinical.eu.qualtrics.com/jfe/form/SV_1IikSYAFbJJX7Vj" frameborder="0" allowfullscreen></iframe>
+                 <div id="bdi2Holder" class="responsive-embed" style="height: 100%">
+                    <!-- iframe width="420"  src="https://pearsonclinical.eu.qualtrics.com/jfe/form/SV_1IikSYAFbJJX7Vj" frameborder="0" allowfullscreen></iframe -->
                   </div>
                   <button class="close-button" data-close aria-label="Close reveal" type="button">
                     <span aria-hidden="true">&times;</span>

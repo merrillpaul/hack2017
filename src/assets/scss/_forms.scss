@@ -1,0 +1,44 @@
+
+
+.input-group {
+    &.disabled {
+        .input-group-label {
+            background-color: $input-background-disabled;
+            cursor: $input-cursor-disabled;
+            color: $medium-gray;
+                     
+        }
+    }
+    .input-group-label {
+        &.icon {
+                background-color: $input-background-color;
+                @if has-value($input-transition) {
+                    transition: $input-transition;
+                }
+        }   
+    }
+    .input-group-field {
+        &:focus + .input-group-label {
+            border: $input-border-focus;
+            @if has-value($input-transition) {
+                transition: $input-transition;
+            }
+            &:last-child {
+                border-#{$global-left}: 0;
+            }
+        }
+
+        &:disabled, &.disabled
+        &[readonly] {
+            + .input-group-label {
+                background-color: $input-background-disabled;
+                cursor: $input-cursor-disabled;
+                color: $medium-gray;
+            }
+        }
+    }
+
+    &.has-icon .input-group-field {
+        border-#{$global-right}: 0;
+    }
+}

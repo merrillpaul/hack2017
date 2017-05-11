@@ -1,0 +1,37 @@
+$mobile-app-toggle-radius: $global-radius;
+$mobile-app-toggle-color: $light-gray;
+$mobile-app-toggle-border-color: $medium-gray;
+$mobile-app-toggle-margin-bottom: $global-margin;
+
+.toggle-group {
+  display: flex;
+  width: 100%;
+  border: 1px solid $mobile-app-toggle-border-color;
+  border-radius: $mobile-app-toggle-radius;
+  overflow: hidden;
+  margin-bottom: $mobile-app-toggle-margin-bottom;
+
+  .button {
+    background: transparent;
+    color: $body-font-color;
+    margin-bottom: 0;
+    flex: 1 0 0;
+    border: 0;
+
+    &:nth-child(n+1) {
+      border-left: 1px solid $mobile-app-toggle-border-color;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:nth-child(1) {
+        border-left: 0 solid;
+    }    
+
+    &.is-active {
+      background: $mobile-app-toggle-color;
+      color: $body-font-color;      
+    }
+  }
+}
+

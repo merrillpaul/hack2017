@@ -1,0 +1,33 @@
+.assessments {
+    .card-section {
+        cursor: pointer;
+        background-color:  scale-color($btn-primary-color, $lightness: 15%); 
+        color: $white; 
+    }
+    .card {
+        &:hover {
+            border-color: #3272bd;
+            border-width: 2px;
+            cursor: pointer;
+        }
+        .card-divider {
+            color: transparent;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.products {
+    
+    .card {
+        &:hover {
+            
+        }
+        .card-divider {
+            color: transparent;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}

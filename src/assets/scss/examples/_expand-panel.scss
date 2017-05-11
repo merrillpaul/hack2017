@@ -1,0 +1,125 @@
+$expand-panel-bg: $pale-gray;
+$expand-panel-bg-odd: $expand-panel-bg;
+$expand-panel-bg-even: darken($pale-gray, 5%);
+$expand-panel-sub-bg: $white;
+$expand-panel-separator: $light-gray;
+
+@mixin expand-panel-arrow-base() {
+    content: "";   
+    margin-right: 0.7rem;
+    border: solid $medium-gray;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position: relative;
+    right: 0;
+    top: 0;
+}
+
+@mixin expand-panel-no-arrow() {
+   &::before {
+    content: "";   
+    margin-right: 0.1rem;
+    border: solid transparent;
+  }
+}
+
+@mixin expand-panel-opened() {
+  &::before {   
+    @include expand-panel-arrow-base();  
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);  
+  }
+}
+
+@mixin expand-panel-closed() {
+  &::before {   
+    @include expand-panel-arrow-base();  
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}
+
+.expand-panel-container  {
+  border: 1px solid $light-gray;
+  font-size: rem-calc(12);
+
+   // background for main accordion items
+  .accordion-item  {
+      &:nth-child(odd) {         
+        background: $expand-panel-bg-odd;
+      }
+      &:nth-child(even) {         
+        background: $expand-panel-bg-even;
+      }
+  }
+
+  // background for sub accordion items
+  .is-accordion-submenu a {
+    background: $expand-panel-sub-bg;
+  }
+
+  // creates classes for nested elements, sub-item-*
+  @for $i from 1 through 6 {
+    .sublevel-#{$i} {
+      padding-left: 0rem + $i;
+    }
+  }
+
+  a {
+    &:not(.button) {      
+      // sets accodion item separator color
+      box-shadow: inset 0 -1px $expand-panel-separator;
+
+      &::after {
+        // sets accodion arrow color and direction
+        border-color: $dark-gray transparent transparent;
+      }
+    }
+  }
+
+ 
+
+  .accordion-title .accordion-title-row {
+     @include grid-row;
+     position: absolute;
+     width: 100%;
+     top: 0;
+     left: 0;
+     padding-left: 2.5rem;
+     .columns {
+       padding-left: 0;
+       .fa {
+         margin: 0;
+       }
+     }
+     .icon {
+       margin-top: -5px;
+     }
+  }
+
+}
+
+// style for folder icon on subitem anchors without a submenu
+.expand-panel-container .is-accordion-submenu-parent[aria-expanded="true"] a.subitem {
+     @include expand-panel-no-arrow();
+}
+
+.expand-panel-container .is-accordion-submenu-parent[aria-expanded="false"] a.subitem {
+    @include expand-panel-no-arrow();
+}
+
+.expand-panel-container .accordion-title a {
+    @include expand-panel-no-arrow();
+}
+
+// changes folder icon to open then accordion is open
+.expand-panel-container a.accordion-title[aria-expanded="true"]  {    
+    @include expand-panel-opened();
+}
+
+// changes folder icon to closed then accordion is closed
+.expand-panel-container a.accordion-title[aria-expanded="false"] {
+   @include expand-panel-closed();  
+}
+

@@ -1,0 +1,64 @@
+
+$alt-tooltip-color: $medium-gray;
+$tip-delta: 0.05;
+$shadow-width: 2px;
+.tooltip {
+    &.alt {
+      box-shadow: $shadow-width $shadow-width 1px 0 rgba($medium-gray, 0.4);    
+      background-color: $white;
+      color: $dark-gray;
+      border: 1px solid $alt-tooltip-color;
+      &::before {
+            @include css-triangle($tooltip-pip-width, $alt-tooltip-color, up);           
+      }
+
+      &::after { 
+          @include css-triangle($tooltip-pip-width - $tip-delta, $white, up);
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+      &.top {
+          box-shadow: $shadow-width*-1 $shadow-width*-1 1px 0 rgba($medium-gray, 0.4);
+          &::before {
+            @include css-triangle($tooltip-pip-width, $alt-tooltip-color, down);            
+          }
+      }     
+
+      &.left {  
+            box-shadow: $shadow-width*-1 $shadow-width*-1 1px 0 rgba($medium-gray, 0.4);    
+            &::before {
+                  @include css-triangle($tooltip-pip-width, $alt-tooltip-color, right);           
+            }
+      }
+
+      &.right::before {
+            @include css-triangle($tooltip-pip-width, $alt-tooltip-color, left);            
+      }
+
+      &.right::after {
+        @include css-triangle($tooltip-pip-width - $tip-delta, $white, left);
+        top: 50%;
+        right: 100%;
+        bottom: auto;
+        left: auto;
+        transform: translateY(-50%);
+      }
+
+      &.left::after {
+        @include css-triangle($tooltip-pip-width - $tip-delta, $white, right);
+        top: 50%;
+        bottom: auto;
+        left: 100%;
+        transform: translateY(-50%);
+      }
+
+      &.top::after {
+            @include css-triangle($tooltip-pip-width - $tip-delta, $white, down);
+            top: 100%;
+            bottom: auto;            
+      }
+     
+    }
+}

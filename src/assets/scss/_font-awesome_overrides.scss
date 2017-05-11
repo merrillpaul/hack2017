@@ -1,0 +1,11 @@
+.fa {
+        @each $name, $color in $foundation-palette {      
+            &.#{$name} {
+                color: $color;
+                &:hover, &:focus {                
+                    color: darken($color, 5%);
+                }
+            }     
+        } 
+}
+

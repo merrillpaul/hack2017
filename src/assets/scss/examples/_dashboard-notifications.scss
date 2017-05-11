@@ -1,0 +1,22 @@
+.dashboard {
+    &.notifications {
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        width: 50%;
+        left: 50%;
+        @include breakpoint(large only) {
+            width: 50%;
+            left: 50%;
+        }
+        @include breakpoint(medium down) {
+            width: 100%;
+            left: 0;
+         }
+
+        .callout {
+            display: none;
+            border: none;
+        }
+    }
+}

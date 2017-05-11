@@ -1,0 +1,75 @@
+// variables
+$multilevel-accordion-bg: $pale-gray;
+$multilevel-accordion-bg-odd: $multilevel-accordion-bg;
+$multilevel-accordion-bg-even: darken($pale-gray, 5%);
+$multilevel-accordion-sub-bg: $white;
+$multilevel-accordion-separator: $light-gray;
+
+.multilevel-accordion-menu {
+    border: 1px solid $light-gray;
+    font-size: rem-calc(13);
+  // background for main accordion items
+  .is-accordion-submenu-parent {
+      &:nth-child(odd) {         
+        background: $multilevel-accordion-bg-odd;
+      }
+      &:nth-child(even) {         
+        background: $multilevel-accordion-bg-even;
+      }
+  }
+
+  // background for sub accordion items
+  .is-accordion-submenu a {
+    background: $multilevel-accordion-sub-bg;
+  }
+
+  // creates classes for nested elements, sub-item-*
+  @for $i from 1 through 6 {
+    .sublevel-#{$i} {
+      text-indent: 0rem + $i/4;
+    }
+  }
+
+  a {
+    color: $dark-gray;
+    // sets accodion item separator color
+    box-shadow: inset 0 -1px $multilevel-accordion-separator;
+
+    &::after {
+      // sets accodion arrow color and direction
+      border-color: transparent;
+    }
+  }
+
+  // padding for each list item
+  .menu > li:not(.menu-text) > a {
+    padding: 1.2rem 1rem;
+  }
+}
+
+// style for folder icon on subitem anchors without a submenu
+.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a.subitem::before {
+  content: "\f016";
+  font-family: FontAwesome;
+  margin-right: 1rem;
+}
+
+
+// changes folder icon to open then accordion is open
+.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a {
+  &::before {
+    content: "\f07c";
+    font-family: FontAwesome;
+    margin-right: 1rem;
+  }
+}
+
+// changes folder icon to closed then accordion is closed
+.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="false"] a {
+  &::before {
+    content: "\f07b";
+    font-family: FontAwesome;
+    margin-right: 1rem;
+  }
+}
+

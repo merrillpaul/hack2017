@@ -77,7 +77,7 @@ clients.startClients = function () {
                             '      <h5>DOB: ' + (client.DOB || '') + '</h5>',
                             '      <h5>Gender : <i class="fa fa-' + (client.gender) + '" aria-hidden="true"></i></h5>',
 
-                            '              <a onClick="localStorage.setItem(\'selClient\', \'' + client.id + '\');self.location=\'assessments.html\'"  class="button primary expanded">',
+                            '              <a onClick="localStorage.setItem(\'selClient\', \'' + client.id + '\');self.location=\'hackathon/assessments.html\'"  class="button primary expanded">',
                             '                <i class="fa fa-plus-circle" aria-hidden="true"></i> Assessment',
                             '      </a>',
 

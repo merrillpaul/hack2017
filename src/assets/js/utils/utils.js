@@ -10,5 +10,9 @@
         }
     };
 
+    utils.getBdi2Url = function () {
+        return 'https://pearsonclinical.eu.qualtrics.com/jfe/form/SV_1IikSYAFbJJX7Vj';
+    };
+
     window.hackUtils = utils;
 })();

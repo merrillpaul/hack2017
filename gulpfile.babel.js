@@ -29,7 +29,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, fonts, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(pages, sass, javascript, images, fonts, report, copy), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -65,7 +65,10 @@ function fonts() {
   return gulp.src(PATHS.fonts)
     .pipe(gulp.dest(PATHS.dist + '/assets/fonts'));
 }
-
+function report() {
+  return gulp.src(PATHS.report)
+    .pipe(gulp.dest(PATHS.dist + '/assets/report'));
+}
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 function copy() {
@@ -169,4 +172,6 @@ function watch() {
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
   gulp.watch('bower_components/font-awesome/fonts/*').on('all', gulp.series(fonts, browser.reload));
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
+  gulp.watch('src/assets/report/**/*').on('all', gulp.series(report, browser.reload));
+  
 }

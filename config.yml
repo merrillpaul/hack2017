@@ -22,6 +22,8 @@ PATHS:
   # Paths to static assets that aren't images, CSS, or JavaScript
   fonts:
     - "bower_components/font-awesome/fonts/*"
+  report:
+    _ "src/assets/report/**/*"
   assets:
     - "src/assets/**/*"
     - "!src/assets/{img,js,scss}/**/*"

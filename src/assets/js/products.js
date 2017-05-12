@@ -117,7 +117,8 @@
                 QuickResult: quickResult,
                 AssessmentStatus: assessmentStatus,
                 AssessmentAdministered: assessmentAdministered,
-                AssessmentResult: assessmentResult
+                AssessmentResult: assessmentResult,
+                LastAdministeredTime: Date.now()
             };
            
             dpd.patients.put(client.id, updateObject, function (result, err) {

@@ -19,17 +19,17 @@
        
            <!-- top nav -->
             <div class="row expanded app-dashboard-top-nav-bar">
-                <div class="columns medium-3">
+                <div class="columns large-3 medium-3">
                     <button data-toggle="app-dashboard-sidebar" class="menu-icon hide-for-medium"></button>
-                    <a href="dashboard.html" class="app-dashboard-logo">Heads App</a>
+                    <a href="dashboard.html" class="app-dashboard-logo">d-MHT</a>
                 </div>
-                <div class="columns show-for-medium">
+                <div class="columns large-6 show-for-medium">
                     <div class="app-dashboard-search-bar-container">
                         <input class="app-dashboard-search" type="search" placeholder="Search">
                         <i class="app-dashboard-search-icon fa fa-search"></i>
                     </div>
                 </div>
-                <div class="columns shrink app-dashboard-top-bar-actions">
+                <div class="right large-3 columns shrink app-dashboard-top-bar-actions">
                     <button onclick="self.location='index.html'" href="/" class="button hollow">Logout</button>
                     <a href="#" height="30" width="30" alt=""><i class="fa fa-info-circle"></i></a>
                 </div>
@@ -60,24 +60,35 @@
                         <div class="app-dashboard-sidebar-inner">
                             <ul class="menu vertical">
                                 <li>
-                                    <a href="javascript:localStorage.removeItem('selClient'); self.location = 'select_patients.html'" class="is-active">
-                                        <i class="primary large material-icons">assessment</i>
-                                        <span class="app-dashboard-sidebar-text">Assessments</span>
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="patients.html">
                                         <i class="primary material-icons">person</i><span class="app-dashboard-sidebar-text">Patients</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="multi-level-expand.html">
-                                        <i class="primary large material-icons">transfer_within_a_station</i><span class="app-dashboard-sidebar-text">Referral</span>
+                                    <a href="javascript:localStorage.removeItem('selClient'); self.location = 'select_assessments.html'" class="is-active">
+                                        <i class="primary large material-icons">assessment</i>
+                                        <span class="app-dashboard-sidebar-text">Assessments</span>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="referrals.html">
+                                        <i class="primary large material-icons">transfer_within_a_station</i><span class="app-dashboard-sidebar-text">Referral Network</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="expand-panels.html" class="is-active">
-                                        <i class="primary large material-icons">build</i><span class="app-dashboard-sidebar-text">Tools</span>
+                                        <i class="primary large material-icons">build</i><span class="app-dashboard-sidebar-text">Tools & Settings</span>
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="expand-panels.html" class="is-active">
+                                        <i class="primary large material-icons">help</i><span class="app-dashboard-sidebar-text">Help</span>
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="expand-panels.html" class="is-active">
+                                        <i class="primary large material-icons">shopping_cart</i><span class="app-dashboard-sidebar-text">Subscription/Pricing</span>
                                     </a>
                                 </li>
             
@@ -88,32 +99,14 @@
             <!-- content -->
             <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
                 <div class="row">
-                    
-                    <div class="columns large-6 small-12 medium-6">
-                        <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-inner-front assessments">
-                                    <span>Mental Health Assessments</span>
-                                </div>
-                                <div class="flip-card-inner-back">
-                                    <h3 class="flip-card-inner-back-title">Select your Assessments</h3>
-                                    <p class="flip-card-inner-back-text">Choose from this list of Pearson curated tools to assess your patients’ mental health. Each tool provides
-                a quick classification and is designed to effectively and efficiently screen for mental health challenges.</p>
-                                    <a href="javascript:localStorage.removeItem('selClient'); self.location = 'select_patients.html'" class="button success">Build One</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                
-                    <div class="columns large-6 small-12 medium-6">
+                     <div class="columns large-6 small-12 medium-6">
                         <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
                             <div class="flip-card-inner">
                                 <div class="flip-card-inner-front patients">
                                     <span>My Patients</span>
                                 </div>
                                 <div class="flip-card-inner-back">
-                                    <h3 class="flip-card-inner-back-title">Your Patients</h3>
+                                    <h3 class="flip-card-inner-back-title">Add and View Patients</h3>
                                     <p class="flip-card-inner-back-text">Add a new patient to your list of those requiring a mental health screening. Or select from your list to
                 administer an assessment. Assessment results can also be accessed here for completed assessments..</p>
                                     <a href="patients.html" class="button primary">View Inside</a>
@@ -122,6 +115,40 @@
                         </div>
                     </div>
                 
+                    <div class="columns large-6 small-12 medium-6">
+                        <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-inner-front assessments">
+                                    <span>Mental Health Assessments</span>
+                                </div>
+                                <div class="flip-card-inner-back">
+                                    <h3 class="flip-card-inner-back-title">Choose an Assessment</h3>
+                                    <p class="flip-card-inner-back-text">Choose from this list of Pearson curated tools to assess your patients’ mental health. Each tool provides
+                a quick classification and is designed to effectively and efficiently screen for mental health challenges.</p>
+                                    <a href="javascript:localStorage.removeItem('selClient'); self.location = 'select_assessments.html'" class="button success">View Products</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                   
+                 <div class="columns large-6 small-12 medium-6">
+                        <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-inner-front tools">
+                                    <span>Tools & Settings</span>
+                                </div>
+                                <div class="flip-card-inner-back">
+                                    <h3 class="flip-card-inner-back-title">Optional Tools and Shortcuts</h3>
+                                    <p class="flip-card-inner-back-text">Import patients into the app from your Electronic Health Record (EHR), export to your EHR, generate a
+                
+                referral and select application settings. Manage your content subscription here.</p>
+                                    <a href="#" class="button success">View Inside</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 
                     <div class="columns large-6 small-12 medium-6">
                         <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
@@ -130,32 +157,18 @@
                                     <span>Referral Network</span>
                                 </div>
                                 <div class="flip-card-inner-back">
-                                    <h3 class="flip-card-inner-back-title">Referrals</h3>
+                                    <h3 class="flip-card-inner-back-title">Add and View Referral Partners</h3>
                                     <p class="flip-card-inner-back-text">Enter and view a list of your local network of providers for more in-depth assessment or therapy. Add
                 
                 new providers or refer directly to any of the providers on your list.</p>
-                                    <a href="javascript:localStorage.removeItem('selClient'); self.location = 'assessments.html'" class="button warning">Referrals</a>
+                                    <a href="referrals.html" class="button warning">Referrals</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 
                 
-                    <div class="columns large-6 small-12 medium-6">
-                        <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-inner-front tools">
-                                    <span>Tools</span>
-                                </div>
-                                <div class="flip-card-inner-back">
-                                    <h3 class="flip-card-inner-back-title">Tools & Settings</h3>
-                                    <p class="flip-card-inner-back-text">Import patients into the app from your Electronic Health Record (EHR), export to your EHR, generate a
-                referral and select application settings.</p>
-                                    <a href="#" class="button success">View Inside</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
                 
                 
                 </div>
@@ -214,6 +227,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
     <script src="assets/js/app.js"></script>
+
+    <div class="help"><i class="warning material-icons">help</i></div>
+
+  
 
   </body>
 </html>

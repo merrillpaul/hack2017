@@ -19,17 +19,17 @@
        
            <!-- top nav -->
             <div class="row expanded app-dashboard-top-nav-bar">
-                <div class="columns medium-3">
+                <div class="columns large-3 medium-3">
                     <button data-toggle="app-dashboard-sidebar" class="menu-icon hide-for-medium"></button>
-                    <a href="dashboard.html" class="app-dashboard-logo">Heads App</a>
+                    <a href="dashboard.html" class="app-dashboard-logo">d-MHT</a>
                 </div>
-                <div class="columns show-for-medium">
+                <div class="columns large-6 show-for-medium">
                     <div class="app-dashboard-search-bar-container">
                         <input class="app-dashboard-search" type="search" placeholder="Search">
                         <i class="app-dashboard-search-icon fa fa-search"></i>
                     </div>
                 </div>
-                <div class="columns shrink app-dashboard-top-bar-actions">
+                <div class="right large-3 columns shrink app-dashboard-top-bar-actions">
                     <button onclick="self.location='index.html'" href="/" class="button hollow">Logout</button>
                     <a href="#" height="30" width="30" alt=""><i class="fa fa-info-circle"></i></a>
                 </div>
@@ -60,24 +60,35 @@
                         <div class="app-dashboard-sidebar-inner">
                             <ul class="menu vertical">
                                 <li>
-                                    <a href="javascript:localStorage.removeItem('selClient'); self.location = 'select_patients.html'" class="is-active">
-                                        <i class="primary large material-icons">assessment</i>
-                                        <span class="app-dashboard-sidebar-text">Assessments</span>
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="patients.html">
                                         <i class="primary material-icons">person</i><span class="app-dashboard-sidebar-text">Patients</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="multi-level-expand.html">
-                                        <i class="primary large material-icons">transfer_within_a_station</i><span class="app-dashboard-sidebar-text">Referral</span>
+                                    <a href="javascript:localStorage.removeItem('selClient'); self.location = 'select_assessments.html'" class="is-active">
+                                        <i class="primary large material-icons">assessment</i>
+                                        <span class="app-dashboard-sidebar-text">Assessments</span>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="referrals.html">
+                                        <i class="primary large material-icons">transfer_within_a_station</i><span class="app-dashboard-sidebar-text">Referral Network</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="expand-panels.html" class="is-active">
-                                        <i class="primary large material-icons">build</i><span class="app-dashboard-sidebar-text">Tools</span>
+                                        <i class="primary large material-icons">build</i><span class="app-dashboard-sidebar-text">Tools & Settings</span>
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="expand-panels.html" class="is-active">
+                                        <i class="primary large material-icons">help</i><span class="app-dashboard-sidebar-text">Help</span>
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="expand-panels.html" class="is-active">
+                                        <i class="primary large material-icons">shopping_cart</i><span class="app-dashboard-sidebar-text">Subscription/Pricing</span>
                                     </a>
                                 </li>
             
@@ -87,7 +98,7 @@
     
             <!-- content -->
             <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
-                <h4>Patients <Portal></Portal></h4>
+                <h4>Patients </h4>
                 <div class="row">
                     <div class="columns large-12">
                         <div class="row">
@@ -102,7 +113,7 @@
                         <div class="clients">
                             <div class="row">
                                 <div class="medium-6 small-12 large-4 columns">
-                                    <a href="#" class="primary expanded button"><i class="fa fa-plus"></i> Add New Patient</a><br/>  
+                                    <a href="javascript:localStorage.removeItem('selClient'); self.location = 'new_patient.html'" class="primary expanded button"><i class="fa fa-plus"></i> Add New Patient</a><br/>  
                                 </div>
                             </div>
                         </div>
@@ -116,6 +127,17 @@
                             window.PAGE_NAME = 'clients';
                         </script>
                     </div>
+                </div>
+                
+                
+                <div class="large reveal" id="repModal" data-reveal data-close-on-click="true" data-animation-in="hinge-in-from-top" 
+                data-animation-out="hinge-out-from-top">
+                 <div id="repModalCtr" class="responsive-embed" style="height: 100%">
+                    
+                  </div>
+                  <button class="close-button" data-close aria-label="Close reveal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
             </div>
     
@@ -168,6 +190,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
     <script src="assets/js/app.js"></script>
+
+    <div class="help"><i class="warning material-icons">help</i></div>
+
+  
 
   </body>
 </html>

@@ -73,7 +73,7 @@ AssessmentResult - score calculated in Qualtrics.
                 '</div>'
             );
 
-        dpd.patients.post({ "PatientName": patientName, "Gender": gender, "DOB": dob }, function (result, err) {
+        dpd.patients.post({ "PatientName": patientName, "Gender": gender, "DOB": dob, LastAdministeredTime: "0"  }, function (result, err) {
             if (err) {
                 return console.log(err);
             }
@@ -107,7 +107,7 @@ AssessmentResult - score calculated in Qualtrics.
                 '</button>',
                 '</div>'
             );
-        dpd.patients.post({ "PatientName": patientName, "Gender": gender, "DOB": dob }, function (result, err) {
+        dpd.patients.post({ "PatientName": patientName, "Gender": gender, "DOB": dob , LastAdministeredTime: "0"}, function (result, err) {
             if (err) {
                 return console.log(err);
             }

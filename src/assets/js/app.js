@@ -31,7 +31,7 @@ $(document).ready(function () {
     window.socketTopic.on('disconnect', function () {
         setTimeout(function () {
             console.log('reconnecting socket topic');
-            window.socketTopic = io('http://35.161.159.36:8443/topic');
+            window.socketTopic = io('https://35.161.159.36:8443/topic');
         }, 4000);
     });
     window.socketTopic.on('connect', function (){

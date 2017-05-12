@@ -17,8 +17,8 @@ $(document).ready(function () {
         case "bai":
         products.startBai();
         break;
-        case "viewclient":
-        //startViewClient();
+        case "new_client":
+            clients.startNewClient();
         break;
         case "referrals":
             referrals.startReferrals();

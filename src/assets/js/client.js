@@ -20,7 +20,7 @@ AssessmentResult - score calculated in Qualtrics.
 
     clients.openReport = function (url) {
         var holder = $('#repModalCtr');
-       holder.html(''.concat(
+        holder.html(''.concat(
             '<iframe width="420" height="100%" src="',
             url,
             '" frameborder="0" allowfullscreen></iframe>'
@@ -31,7 +31,7 @@ AssessmentResult - score calculated in Qualtrics.
 
     clients.generateReport = function () {
         hackUtils.getCurrentSelectedClient(function (client) {
-            
+
             var recentAdm = client.AssessmentAdministered || [],
                 adm;
             if (recentAdm.length > 0) {
@@ -54,6 +54,16 @@ AssessmentResult - score calculated in Qualtrics.
         });
     };
 
+    clients.startNewClient = function () {
+        $('#savePatientBtn').click(function () {
+            clients.savePatient();
+        });
+        $('#savePatientAndAssessmentBtn').click(function () {
+            clients.savePatientAndCreateAssessment();
+        });
+    };
+
+
 
     clients.savePatient = function () {
         var
@@ -73,7 +83,7 @@ AssessmentResult - score calculated in Qualtrics.
                 '</div>'
             );
 
-        dpd.patients.post({ "PatientName": patientName, "Gender": gender, "DOB": dob, LastAdministeredTime: "0"  }, function (result, err) {
+        dpd.patients.post({ "PatientName": patientName, "Gender": gender, "DOB": dob, "LastAdministeredTime": "0" }, function (result, err) {
             if (err) {
                 return console.log(err);
             }
@@ -93,8 +103,8 @@ AssessmentResult - score calculated in Qualtrics.
         var
             patientName = $('#newPatientForm input[name="patientName"]').val(),
             gender = $('#newPatientForm').serializeArray().find(function (it) { return it.name === 'gender'; }).value,
-             dob = $('#newPatientForm').serializeArray().find(function (it) { return it.name === 'dob'; }).value,
-           
+            dob = $('#newPatientForm').serializeArray().find(function (it) { return it.name === 'dob'; }).value,
+
             htmlAlert = ''.concat(
                 '<div id="patientSuccess" data-closable="hinge-out-from-top" data-closable class="callout alert-callout-border success">',
                 '<span class="fa fa-check-circle"></span>     ',
@@ -107,7 +117,7 @@ AssessmentResult - score calculated in Qualtrics.
                 '</button>',
                 '</div>'
             );
-        dpd.patients.post({ "PatientName": patientName, "Gender": gender, "DOB": dob , LastAdministeredTime: "0"}, function (result, err) {
+        dpd.patients.post({ "PatientName": patientName, "Gender": gender, "DOB": dob, "LastAdministeredTime": "0" }, function (result, err) {
             if (err) {
                 return console.log(err);
             }
@@ -208,7 +218,7 @@ AssessmentResult - score calculated in Qualtrics.
                     }
                 dpd.patients.get(function (result, err) {
                     if (err) return console.log(err);
-                    result = result.sort (function (a, b) {
+                    result = result.sort(function (a, b) {
                         return parseInt(b.LastAdministeredTime, 10) - parseInt(a.LastAdministeredTime, 10);
                     });
                     paintClients(result);

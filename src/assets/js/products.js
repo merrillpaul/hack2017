@@ -107,7 +107,6 @@
             assessmentStatus = client.AssessmentStatus || [],
             assessmentAdministered = client.AssessmentAdministered || [],
             assessmentResult = client.AssessmentResult || [];
-
             quickResult.unshift(quickresult.toLowerCase());
             assessmentStatus.unshift('completed');
             assessmentAdministered.unshift(product);

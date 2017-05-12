@@ -48,7 +48,9 @@ function publish() {
 function basehrefix() {
   return gulp.src('./dist/**/*.html')
   .pipe(replace(/<base href=\"\/\"/g, '<base href="/hack2017/"'))
-  //.pipe(replace(/=\"assets\//g, "=/hack2017/assets/"))
+  // https://35.161.159.36:8843
+  // http://saotxwl-6wczk72:2403
+  .pipe(replace(/http\:\/\/saotxwl-6wczk72:2403/g, "https://35.161.159.36:8843"))
   //.pipe(replace(/=\"..assets\//g, "=/hack2017/assets/"))
   .pipe(gulp.dest('./dist'));
 }

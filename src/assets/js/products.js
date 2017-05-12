@@ -128,7 +128,7 @@
                 setTimeout(function () {
                    
                     Foundation.Motion.animateOut($('#bdiResultNotification'), 'hinge-out-from-top');
-                    $('#bdiResultNotification').remove();
+                   // $('#bdiResultNotification').remove();
                 }, 2000);
                 setTimeout(function () {
                     self.location = 'patients.html';
